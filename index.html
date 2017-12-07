@@ -48,36 +48,43 @@
     <div class="container2">
         <div class="title">
             <h1>Address Book</h1>
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Phone</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">City</th>
+                        <th scope="col">E-Mail</th>
+                        <th scope="col"> </th>
+                        <th scope="col"> </th>
+                        <th scope="col"> </th>
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm">
-                        One of three columns
-                    </div>
-                    <div class="col-sm">
-                        One of three columns
-                    </div>
-                    <div class="col-sm">
-                        One of three columns
-                    </div>
-                </div>
-            </div>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
 
 
         </div>
         <div class="quickaddForm">
             <h3>New Contact</h3>
-            <label for="fullname">Name</label><input type="text" id="fullname" class="formFields">
-            <label for="phone">Phone</label><input type="text" id="phone" class="formFields">
-            <label for="address">Address</label> <input type="text" name="address" id="address" class="formFields">
-            <label for="city">City</label><input type="text" id="city" class="formFields">
-            <label for="email">E-Mail</label><input type="text" id="email" class="formFields">
+            <tbody>
+                <tr>
+                    <th scope="row"><label for="fullname">Name</label><input type="text" id="fullname" class="formFields"></th>
+                    <td><label for="phone">Phone</label><input type="text" id="phone" class="formFields"></td>
+                    <td><label for="address">Address</label> <input type="text" name="address" id="address" class="formFields"></td>
+                    <td><label for="city">City</label><input type="text" id="city" class="formFields"></td>
+                    <td><label for="email">E-Mail</label><input type="text" id="email" class="formFields"></td>
+                </tr>
+            </tbody>
             <br><br>
             <button id="Add">Add Now</button><button id="Cancel">Cancel</button>
         </div>
         <div class="addbook">
-        </div>
-    </div>
+
+
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

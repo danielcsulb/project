@@ -138,3 +138,19 @@ textarea {
     border-radius: 8px;
     text-decoration: none;
 }
+
+.entry .Edit {
+    width: 30px;
+    float: left;
+    padding: 9px;
+}
+
+.entry .Edit a {
+    font-family: sans-serif;
+    color: #FFF;
+    font-size: 12px;
+    padding: 5px;
+    background: rgb(119, 127, 169);
+    border-radius: 8px;
+    text-decoration: none;
+}

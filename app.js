@@ -78,12 +78,14 @@ window.onload = function() {
             addBookDiv.innerHTML = '';
             for (var n in addressBook) {
                 var str = '<div class="entry">';
-                str += '<div class="name"><p>' + addressBook[n].fullname + '</p></div>';
-                str += '<div class="email"><p>' + addressBook[n].email + '</p></div>';
-                str += '<div class="phone"><p>' + addressBook[n].phone + '</p></div>';
-                str += '<div class="address"><p>' + addressBook[n].address + '</p></div>';
-                str += '<div class="city"><p>' + addressBook[n].city + '</p></div>';
-                str += '<div class="del"><a href="#" class="delbutton" data-id="' + n + '">Delete</a></div>';
+                str += '<th scope="row"> <div class="name">' + addressBook[n].fullname + '</div></th>';
+                str += '<td><div class="email">' + addressBook[n].email + '</div></td>';
+                str += '<td><div class="phone">' + addressBook[n].phone + '</div></td>';
+                str += '<td><div class="address">' + addressBook[n].address + '</div></td>';
+                str += '<td><div class="city">' + addressBook[n].city + '</div></td>';
+                str += '<td><div class="Edit"><a href="#" class="Editbutton" data-id="' + n + '">Edit</a></div></td>';
+                str += '<td><div class="del"><a href="#" class="delbutton" data-id="' + n + '">Delete</a></div></td>';
+
                 str += '</div>';
                 addBookDiv.innerHTML += str;
             }
