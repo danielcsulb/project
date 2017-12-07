@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Project </title>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 
@@ -23,12 +24,40 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-nav-demo">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">Index</a></li>
-                    <li><a href="#">New</a></li>
+                    <li>
+                        <p class="navbar-btn">
+                            <div class="listContact" id="List">
+                                <button class="btn btn-default"><i class="fa fa-list-ul" aria-hidden="true"></i> Index</button>
+                            </div>
+                        </p>
+                    </li>
+                    <li>
+                        <p class="navbar-btn">
+                            <div class="quickadd" id="QuickAdd">
+                                <button class="btn btn-default"><i class="fa fa-user-plus" aria-hidden="true"></i> New</button>
+                            </div>
+                        </p>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <div class="container">
+        <div class="title">
+            <h1>Address Book</h1>
+        </div>
+        <!-- <div class="quickadd"><button id="QuickAdd">+ Add</button></div> -->
+        <div class="quickaddForm">
+            <label for="fullname">Name</label><input type="text" id="fullname" class="formFields">
+            <label for="phone">Phone</label><input type="text" id="phone" class="formFields">
+            <label for="address">Address</label><textarea name="address" id="address" cols="30" rows="10" class="formFields"></textarea>
+            <label for="city">City</label><input type="text" id="city" class="formFields">
+            <label for="email">E-Mail</label><input type="text" id="email" class="formFields">
+            <br><br>
+            <button id="Add">Add Now</button><button id="Cancel">Cancel</button>
+        </div>
+        <div class="addbook">
 </body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
