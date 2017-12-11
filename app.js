@@ -94,7 +94,7 @@ window.onload = function() {
         }
     }
 
-    showAddressBook();
+    // showAddressBook();
 
 
 
