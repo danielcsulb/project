@@ -77,7 +77,8 @@ window.onload = function() {
             // Loop over the array addressBook and insert into the page
             addBookDiv.innerHTML = '';
             for (var n in addressBook) {
-                var str = '<div class="entry">';
+                // var str = '<div class="entry">';
+                var str = '<tr>';
                 str += '<th scope="row"> <div class="name">' + addressBook[n].fullname + '</div></th>';
                 str += '<td><div class="email">' + addressBook[n].email + '</div></td>';
                 str += '<td><div class="phone">' + addressBook[n].phone + '</div></td>';
@@ -85,8 +86,9 @@ window.onload = function() {
                 str += '<td><div class="city">' + addressBook[n].city + '</div></td>';
                 str += '<td><div class="Edit"><a href="#" class="Editbutton" data-id="' + n + '">Edit</a></div></td>';
                 str += '<td><div class="del"><a href="#" class="delbutton" data-id="' + n + '">Delete</a></div></td>';
+                str += '</tr>';
 
-                str += '</div>';
+                // str += '</div>';
                 addBookDiv.innerHTML += str;
             }
         }
