@@ -2,6 +2,7 @@ window.onload = function() {
 
     var quickAddBtn = document.getElementById('QuickAdd');
     var quickAddFormDiv = document.querySelector('.quickaddForm')
+    var contactlistDiv = document.querySelector('.contactlist')
     var cancelBtn = document.getElementById('Cancel');
     var AddBtn = document.getElementById('Add');
 
@@ -16,10 +17,13 @@ window.onload = function() {
     quickAddBtn.addEventListener("click", function() {
         // display the form div
         quickAddFormDiv.style.display = "block";
+        contactlistDiv.style.display = "none";
+
     });
 
     cancelBtn.addEventListener("click", function() {
         quickAddFormDiv.style.display = "none";
+        contactlistDiv.style.display = "block";
     });
 
 
@@ -46,6 +50,8 @@ window.onload = function() {
             addressBook.push(obj);
             localStorage['addbook'] = JSON.stringify(addressBook);
             quickAddFormDiv.style.display = "none";
+            contactlistDiv.style.display = "block";
+
             clearForm();
             showAddressBook();
         }
@@ -94,7 +100,7 @@ window.onload = function() {
         }
     }
 
-    // showAddressBook();
+    showAddressBook();
 
 
 
