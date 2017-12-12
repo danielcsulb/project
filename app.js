@@ -1,10 +1,15 @@
 window.onload = function() {
 
     var quickAddBtn = document.getElementById('QuickAdd');
-    var quickAddFormDiv = document.querySelector('.quickaddForm')
-    var contactlistDiv = document.querySelector('.contactlist')
+    var quickAddFormDiv = document.querySelector('.quickaddForm');
+    var editFormDiv = document.querySelector('.editForm');
+    var contactlistDiv = document.querySelector('.contactlist');
+
     var cancelBtn = document.getElementById('Cancel');
+    var EditCancelbtn = document.getElementById('Cancel1');
+    var EditformEditBtn = document.getElementById('Edit1');
     var AddBtn = document.getElementById('Add');
+    var EditBtn = document.getElementById('Edit');
 
     var fullname = document.getElementById('fullname');
     var phone = document.getElementById('phone');
@@ -12,24 +17,44 @@ window.onload = function() {
     var city = document.getElementById('city');
     var email = document.getElementById('email');
 
+    var Editfullname = document.getElementById('editfullname');
+    var Editphone = document.getElementById('editphone');
+    var Editaddress = document.getElementById('editaddress');
+    var Editcity = document.getElementById('editcity');
+    var Editemail = document.getElementById('editemail');
+
     var addBookDiv = document.querySelector('.addbook');
+
 
     quickAddBtn.addEventListener("click", function() {
         // display the form div
         quickAddFormDiv.style.display = "block";
         contactlistDiv.style.display = "none";
+        editFormDiv.style.display = "none";
+
+
 
     });
 
     cancelBtn.addEventListener("click", function() {
         quickAddFormDiv.style.display = "none";
+        editFormDiv.style.display = "none";
+        contactlistDiv.style.display = "block";
+    });
+
+    EditCancelbtn.addEventListener("click", function() {
+        quickAddFormDiv.style.display = "none";
+        editFormDiv.style.display = "none";
         contactlistDiv.style.display = "block";
     });
 
 
     AddBtn.addEventListener("click", addToBook);
+    // EditformEditBtn.addEventListener("click", editToBook);
 
     addBookDiv.addEventListener("click", removeEntry);
+    addBookDiv.addEventListener("click", editEntry);
+
 
     var addressBook = [];
 
@@ -51,7 +76,7 @@ window.onload = function() {
             localStorage['addbook'] = JSON.stringify(addressBook);
             quickAddFormDiv.style.display = "none";
             contactlistDiv.style.display = "block";
-
+            // editFormDiv.style.display = "none";
             clearForm();
             showAddressBook();
         }
@@ -67,10 +92,30 @@ window.onload = function() {
         }
     }
 
+    function editEntry() {
+        // if (a.target.classList.contains('Editbutton')) {
+        editFormDiv.style.display = "block";
+        contactlistDiv.style.display = "none";
+        // var editID = a.target.getAttribute('data-id');
+        // editID.push(editfullname.value, );
+        FilleditForm();
+
+    }
+
+
+
+
     function clearForm() {
         var formFields = document.querySelectorAll('.formFields');
         for (var i in formFields) {
             formFields[i].value = '';
+        }
+    }
+
+    function FilleditForm() {
+        var formFields = document.querySelectorAll('.editformFields');
+        for (var i in formFields) {
+            formFields[i].value = JSON.stringify[addressBook];
         }
     }
 
